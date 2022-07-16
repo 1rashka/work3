@@ -93,8 +93,7 @@
 
     .content__button{
         width: 250px;
-        
-        
+   
     }
 
     .button{
@@ -102,6 +101,13 @@
         background-color: #ffd429;
         font-size: 15px;
         padding: 12px 0;
+
+        &:hover,&:focus{
+           
+            background-color: #fff;
+            box-shadow: 0 0 5px #ffd429;
+            transition: 0.5s;
+        }
     }
 
     .about{
@@ -183,6 +189,10 @@
         border: 1px solid #bbb;
         color: #9c9b9f;
         font-size: 15px;
+
+        &:hover,&:focus{
+            border: 1px solid #4bb9fa;
+        }
     }
 
     .form__input,.form__area{

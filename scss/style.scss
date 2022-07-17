@@ -16,7 +16,7 @@
         max-width: 100%;
     }
 
-    .ounter{
+    .container{
         max-width: 1170px;
         margin: 0 auto;
     }
@@ -26,7 +26,8 @@
     }
 
     .top{
-        margin-top: 120px;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 
     body{
@@ -34,24 +35,38 @@
     }
 
     .header{
-        background-color: #4bb9fa;
         padding-top: 20px;
-        
+        position: relative;
+        z-index: 15;
     }
-
-   .nav{
-        max-width: 1170px;
-        margin: 0 auto;
-   }
 
    .nav__logo{
     width: 98px;
+   }
+
+   .promo{
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: -70px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #4bb9fa;
+
+        }
+
    }
 
     .content{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+        z-index: 15;
     }
 
     .content__left{
@@ -111,12 +126,12 @@
     }
 
     .about{
-        min-height: 350px;
+        min-height: auto;
     }
 
     .about__h2{
        
-        margin-bottom: 90px;
+        padding-bottom: 90px;
     }
 
     .h2{
@@ -125,7 +140,7 @@
     }
 
     .item{
-     max-width: 350px;
+     max-width: 250px;
     }
 
 
@@ -147,7 +162,6 @@
     .item__text{
         text-align: center;
         margin: 0 auto;
-        width: 80%;
     }
 
     .time-img{
@@ -173,14 +187,13 @@
         flex-direction: column;
         align-items: center;
         margin-top: 70px;
-       
-        
+        max-width: 350px;
         
     }
 
     .form__input,.form__button{
+        width: 100%;
         
-        width: 350px;
     }
 
     .form__input{
@@ -204,15 +217,12 @@
     .footer{
         background-color: #164d7a;
         text-align: center;
-        min-height: 200px;
+        padding: 50px 0;
    
     }
 
     .footer__text{
-
-        padding-top: 100px;
         color: #fff;
-
     }
 
  
@@ -221,4 +231,8 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .content__left{
+        width: 100%;
+     }
 }
